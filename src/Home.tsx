@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useUserStore } from '../hooks/useUserStore';
 const Home = () => {
     const [username, setUsername] = useState("");
-    const {usernameState , changeUsername} = useUserStore();
+    const {changeUsername} = useUserStore();
     let ws = useRef<WebSocket | null>(null);
     useEffect(() => {
         ws.current = new WebSocket('ws://localhost:8080/');
